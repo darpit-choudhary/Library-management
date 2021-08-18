@@ -3,7 +3,7 @@ import pymysql
 import tkinter.messagebox as tmsg
 
     #connect to mysql
-my_pass = "D@rpit123"
+my_pass = "root"            #example password
 my_database = 'db'
 
 con = pymysql.connect(host = 'localhost', user = 'root', password = my_pass, database = my_database)
