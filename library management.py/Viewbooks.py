@@ -3,7 +3,7 @@ import pymysql
 import tkinter.messagebox as tmsg
 
     #connect to mysql
-my_pass = "root"            #example password
+my_pass = "D@rpit123"
 my_database = 'db'
 
 con = pymysql.connect(host = 'localhost', user = 'root', password = my_pass, database = my_database)
@@ -35,7 +35,7 @@ def view():
     
     tk.Label(f2, text="%-10s%-40s%-30s%-20s"%('BID','Title','Author','Status'),
     bg='black',fg='white').place(relx=0.07,rely=0.1)
-    tk.Label(f2, text = "----------------------------------------------------------------------------",bg='black',fg='white').place (relx=0.05,rely=0.2)
+    tk.Label(f2, text = "-------------------------------------------------------------------------------------",bg='black',fg='white').place (relx=0,rely=0.2, relwidth = 1)
     
     get_book = "select * from "+table_of_books
     
