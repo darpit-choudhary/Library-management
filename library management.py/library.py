@@ -11,31 +11,25 @@ root = tk.Tk()
 root.geometry("600x500")
 root.title("Library Management")
 root.wm_iconbitmap("Library_books.ico")
-
+#root.attributes('-fullscreen', True)
 
 #connect to mysql
-my_pass = 'root'               #example password
+my_pass = 'D@rpit123' #password to use
 my_database = 'db'   #database name
 
 con = pymysql.connect(host = 'localhost', user = 'root', password = my_pass, database = my_database)
 cur = con.cursor()
 
 # TODO background image
-n = 0.25
-same = True
-background_image =Image.open("lib.jpg")
-[imageSizeWidth, imageSizeHeight] = background_image.size
-newImageSizeWidth = int(imageSizeWidth*n)
-if same:
-    newImageSizeHeight = int(imageSizeHeight*n) 
-else:
-    newImageSizeHeight = int(imageSizeHeight/n) 
-    
-background_image = background_image.resize((newImageSizeWidth,newImageSizeHeight),Image.ANTIALIAS)
+
+background_image =Image.open("Library 2.jpg")
+[newimageSizeWidth, newimageSizeHeight] = background_image.size
+
+background_image = background_image.resize((newimageSizeWidth,newimageSizeHeight),Image.ANTIALIAS)
 img = ImageTk.PhotoImage(background_image)
 Canvas1 = tk.Canvas(root)
 Canvas1.create_image(300,340,image = img)      
-Canvas1.config(bg="white",width = newImageSizeWidth, height = newImageSizeHeight)
+Canvas1.config(bg="white",width = newimageSizeWidth, height = newimageSizeHeight)
 Canvas1.pack(expand=True,fill='both')
 
 # heading frame and heading label
