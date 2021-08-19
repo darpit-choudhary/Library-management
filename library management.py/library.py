@@ -14,7 +14,7 @@ root.wm_iconbitmap("Library_books.ico")
 #root.attributes('-fullscreen', True)
 
 #connect to mysql
-my_pass = 'D@rpit123' #password to use
+my_pass = 'root' #password example
 my_database = 'db'   #database name
 
 con = pymysql.connect(host = 'localhost', user = 'root', password = my_pass, database = my_database)
